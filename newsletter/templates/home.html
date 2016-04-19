@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block head_title %} Welcome {% endblock %}
+
+{% block jumb %}
+ <div class='row'>
+      <div class='col-sm-8'>
+      <div class="jumbotron">
+        <h1>MY First Django Project</h1>
+        <p>This is my first Django site. Thank you Coding entrapuners For supporting me so far.I will tryto do it much better than this.</p>
+        <p>I love to do this project. it is boosting my confidence.</p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="" role="button">Move Forward &raquo;</a>
+         </p>
+          </div>
+          </div>
+         <div class='col-sm-4' style='background-color:black;height:300px'>
+          
+         </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-3">
+
+      <<h1>{{ title }}</h1>
+      <form method="POST" action=''>{%csrf_token%}
+        {{ form|crispy }}
+        <input class='btn btn-primary' type="submit" value='Sign up'/>
+    
+    
+      </form>
+  </div>
+</div>
+{% endblock %}
